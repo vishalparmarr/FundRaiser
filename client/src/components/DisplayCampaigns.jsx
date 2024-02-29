@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { v4 as uuidv4 } from "uuid";
+
 import FundCard from './FundCard';
 import { loader } from '../assets';
 
@@ -26,8 +26,9 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
           </p>
         )}
 
-        {!isLoading && campaigns.length > 0 && campaigns.map((campaign) => <FundCard 
-          key={campaign.id}
+        {!isLoading && campaigns.length > 0 && campaigns.map((campaign, index) => <FundCard 
+          // key={campaign.id}
+          key={`campaign-${index}`}
           {...campaign}
           handleClick={() => handleNavigate(campaign)}
         />)}
