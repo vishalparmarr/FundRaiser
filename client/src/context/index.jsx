@@ -3,8 +3,9 @@ import {contractAddress} from '../abis/contract-address.json';
 import {abi} from '../abis/contractAbi.json';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useConnect } from "@thirdweb-dev/react";
 
-import { useAddress, useContract, useMetamask, useContractWrite } from '@thirdweb-dev/react';
+import { useAddress, useContract, useContractWrite } from '@thirdweb-dev/react';
 import { ethers } from 'ethers';
 
 const StateContext = createContext();
@@ -14,7 +15,7 @@ export const StateContextProvider = ({ children }) => {
   const { mutateAsync: createCampaign } = useContractWrite(contract, 'createCampaign');
 
   const address = useAddress();
-  const connect = useMetamask();
+  const connect = useConnect();
 
   const publishCampaign = async (form) => {
     try {

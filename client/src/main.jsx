@@ -7,8 +7,7 @@ import {
   coinbaseWallet,
   walletConnect,
   localWallet,
-  embeddedWallet,
-  ConnectWallet
+  embeddedWallet
 } from "@thirdweb-dev/react";
 import { Sepolia } from "@thirdweb-dev/chains";
 

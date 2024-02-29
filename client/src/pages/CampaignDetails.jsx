@@ -171,7 +171,7 @@ const CampaignDetails = () => {
                   <CustomButton 
                   btnType="button"
                   title={remainingDays >= 0 && compareAmounts() ?  
-                  "Edit" : "" }
+                  "Edit" : "Change" }
                   styles="w-full bg-[#8c6dfd]"
                   handleClick={() => {
                     if(state.owner == address) handleUpdate()
@@ -184,7 +184,7 @@ const CampaignDetails = () => {
                     <CustomButton 
                     btnType="button"
                     title={remainingDays >= 0 && compareAmounts() ?  
-                    "Delete" : "" }
+                    "Delete" : "Delete" }
                     styles="w-full bg-[#8c6dfd]"
                     handleClick={() => {
                       if(state.owner == address) handleDelete(state.pId)
