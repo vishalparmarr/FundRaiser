@@ -12,8 +12,8 @@
   "dependencies": {
     "@clerk/clerk-react": "^4.30.5",
     "@clerk/themes": "^1.7.9",
-    "@thirdweb-dev/auth": "^4.1.33",
-    "@thirdweb-dev/react": "^3",
+    "@thirdweb-dev/auth": "^4.1.35",
+    "@thirdweb-dev/react": "^3.16.5",
     "@thirdweb-dev/sdk": "^3.10.67",
     "ethers": "^5.7.2",
     "react": "^18.2.0",

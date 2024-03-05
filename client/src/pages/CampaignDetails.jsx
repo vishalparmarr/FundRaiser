@@ -104,7 +104,7 @@ const CampaignDetails = () => {
               </div>
               <div>
                 <h4 className="font-epilogue font-semibold text-[14px] text-white break-all">{state.owner}</h4>
-                <p className="mt-[4px] font-epilogue font-normal text-[12px] text-[#808191]">10 Campaigns</p>
+                <p className="mt-[4px] font-epilogue font-normal text-[12px] text-[#808191]"></p>
               </div>
             </div>
           </div>

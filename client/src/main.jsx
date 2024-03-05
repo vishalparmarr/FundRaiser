@@ -19,22 +19,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <ThirdwebProvider activeChain={Sepolia}
-  clientId="6f15e039d5bf80778aa9923f094bcc09"
+    clientId="bdb359591f77fc7432c4bada1fed080e"
       supportedWallets={[
         metamaskWallet({recommended: true}),
         coinbaseWallet(),
         walletConnect(),
         localWallet(),
         embeddedWallet({
-          auth: {
-            options: [
-              "email",
-              "google",
-              "apple",
-              "facebook",
-            ],
-          },
-        }),
+      auth: {
+        options: ["email", "facebook", "apple", "google"],
+      }
+    }),
       ]}
       
   > 

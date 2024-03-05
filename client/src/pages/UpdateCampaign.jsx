@@ -6,8 +6,6 @@ import { money } from '../assets';
 import { CustomButton, FormField, Loader } from '../components';
 import { checkIfImage } from '../utils';
 import { useNavigate } from 'react-router-dom';
-// import 'react-responsive-modal/styles.css';
-// import { Modal } from 'react-responsive-modal';
 
 const UpdateCampaign = () => {
     const navigate = useNavigate();
@@ -67,13 +65,6 @@ const UpdateCampaign = () => {
           />
         </div>
         <div className="flex flex-wrap gap-[40px]">
-          {/* <FormField 
-            labelName="Your Name *"
-            placeholder="John Doe"
-            inputType="text"
-            value={form.name}
-            handleChange={(e) => handleFormFieldChange('name', e)}
-          /> */}
           <FormField 
             labelName="Campaign Title *"
             placeholder="Write a title"
@@ -124,7 +115,7 @@ const UpdateCampaign = () => {
           <div className="flex justify-center items-center mt-[40px]">
             <CustomButton 
               btnType="submit"
-              title="Submit new campaign"
+              title="Edit campaign"
               styles="bg-[#1dc071]"
             />
           </div>
