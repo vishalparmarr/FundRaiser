@@ -15,11 +15,14 @@
     "@thirdweb-dev/auth": "^4.1.35",
     "@thirdweb-dev/react": "^3.16.5",
     "@thirdweb-dev/sdk": "^3.10.67",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
     "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.4",
     "react-toastify": "^10.0.4",
+    "semantic-ui-react": "^2.1.5",
     "zod-error": "^1.5.0"
   },
   "devDependencies": {

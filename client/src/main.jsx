@@ -1,42 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 import {
   ThirdwebProvider,
   metamaskWallet,
   coinbaseWallet,
   walletConnect,
   localWallet,
-  embeddedWallet
+  embeddedWallet,
 } from "@thirdweb-dev/react";
 import { Sepolia } from "@thirdweb-dev/chains";
 
-import { StateContextProvider } from './context';
-import App from './App';
-import './index.css';
+import { StateContextProvider } from "./context";
+import App from "./App";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <ThirdwebProvider activeChain={Sepolia}
-    clientId="bdb359591f77fc7432c4bada1fed080e"
-      supportedWallets={[
-        metamaskWallet({recommended: true}),
-        coinbaseWallet(),
-        walletConnect(),
-        localWallet(),
-        embeddedWallet({
-      auth: {
-        options: ["email", "facebook", "apple", "google"],
-      }
-    }),
-      ]}
-      
-  > 
+  <ThirdwebProvider
+    activeChain={Sepolia}
+    clientId={process.env.CLIENT_ID}
+    supportedWallets={[
+      metamaskWallet({ recommended: true }),
+      coinbaseWallet(),
+      walletConnect(),
+      localWallet(),
+      embeddedWallet({
+        auth: {
+          options: ["email", "facebook", "apple", "google"],
+        },
+      }),
+    ]}
+  >
     <Router>
       <StateContextProvider>
         <App />
       </StateContextProvider>
     </Router>
-  </ThirdwebProvider> 
-)
+  </ThirdwebProvider>
+);
